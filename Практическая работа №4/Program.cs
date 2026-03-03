@@ -25,7 +25,7 @@ namespace NumericQuestUltimate
         static void nachalo()
         {
             Console.WriteLine("Игра сделана на болгарском языке лично Мизенковым Даниилом и Садриевым Амиром");
-            Console.WriteLine(" -----Числов квест------  ");
+            Console.WriteLine(" -----5 практика------  ");
             Console.WriteLine("Вы спусьились в кенийский подвал");
             Console.WriteLine(" -----------  ");
             Console.WriteLine("15  комнат впереди");
@@ -33,7 +33,7 @@ namespace NumericQuestUltimate
             Console.WriteLine("10 рублей");
             Console.WriteLine("- Зелья: 2 (восстанавливают 30 HP)");
             Console.WriteLine("- Стрелы: 5 ");
-            Console.WriteLine("Оружие: меч и лук");
+            Console.WriteLine("Короче у тя есть меч и лук");
             Console.WriteLine("");
             Console.WriteLine("");
 
