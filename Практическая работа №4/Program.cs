@@ -215,14 +215,14 @@ namespace NumericQuestUltimate
                 gold += 8;
                 maxHP -= 10;
                 playerHP = Math.Min(playerHP, maxHP);
-                Console.WriteLine($"+8 кенийских рублей, но максимум HP уменьшен до {maxHP}");
+                Console.WriteLine($"+8 кенийских рублей, но максимум HP уменьшен до {maxHP} неприятность ");
             }
             else
             {
                 Console.WriteLine(" Простой ящик");
                 int reward = rand.Next(1, 4);
                 if (reward == 1) { gold += 5; Console.WriteLine("+5 кенийских рублей"); }
-                else if (reward == 2) { potions++; Console.WriteLine("+1 зелье"); }
+                else if (reward == 2) { potions++; Console.WriteLine("+1 отвар"); }
                 else { arrows += 3; Console.WriteLine("+3 стрелы"); }
             }
         }
@@ -312,20 +312,20 @@ namespace NumericQuestUltimate
 
             Console.WriteLine(mu);
             Console.WriteLine(" ТОРГОВЕЦ: 'Что желаете?'");
-            Console.WriteLine("1. Зелье (10 кенийских рублей)  2. Стрелы х3 (5 кенийских рублей)  3. Уйти");
+            Console.WriteLine("1. ОТВАР (10 кенийских рублей)  2. Стрелы х3 (5 кенийских рублей)  3. Уйти");
             string choice = Console.ReadLine();
 
             if (choice == "1" && gold >= 10)
             {
                 gold -= 10;
                 potions++;
-                Console.WriteLine("Куплено зелье!");
+                Console.WriteLine("Отвар приобретен");
             }
             else if (choice == "2" && gold >= 5)
             {
                 gold -= 5;
                 arrows += 3;
-                Console.WriteLine("Куплено 3 стрелы!");
+                Console.WriteLine("Оформлено 3 стрелы");
             }
         }
 
@@ -482,7 +482,7 @@ namespace NumericQuestUltimate
                 playerHP -= 10;
                 potions += 2;
                 arrows += 5;
-                Console.WriteLine("Сделка совершена!");
+                Console.WriteLine("ОФОРМЛЕНО");
             }
         }
 
@@ -577,7 +577,7 @@ namespace NumericQuestUltimate
             if (answer.Contains("амир") || answer.Contains("саид"))
             {
                 gold += 10;
-                Console.WriteLine("Правильно! +10 кенийских рублей");
+                Console.WriteLine("ДА  +10 кенийских рублей");
             }
             else
             {
@@ -646,7 +646,7 @@ namespace NumericQuestUltimate
                                                                                                                                                                          
 ";
             Console.WriteLine(bo);
-            Console.WriteLine("\n ФИНАЛЬНАЯ КОМНАТА! БОСС!");
+            Console.WriteLine("\n ФИНАЛЬНАЯ КОМНАТА ТУТА У НАС  БОСС ЧЕРНИЛА !");
             int bossHP = 100;
             int bossAttack = 15;
             int turnCount = 0;
@@ -655,7 +655,7 @@ namespace NumericQuestUltimate
             {
                 turnCount++;
                 Console.WriteLine($"\nБосс: {bossHP} HP");
-                Console.Write("1. Меч  2. Лук  3. Зелье: ");
+                Console.Write("1. Меч  2. Лук  3. ОТВАР: ");
                 string choice = Console.ReadLine();
 
                 // Атака игрока
@@ -696,7 +696,7 @@ namespace NumericQuestUltimate
                     }
 
                     playerHP -= damage;
-                    Console.WriteLine($"Босс наносит {damage} урона!");
+                    Console.WriteLine($"Босс ЧЕРНИЛА наносит {damage} урона!");
                 }
             }
 
@@ -710,11 +710,11 @@ namespace NumericQuestUltimate
                 potions--;
                 int heal = 30;
                 playerHP = Math.Min(playerHP + heal, maxHP);
-                Console.WriteLine($"Зелье! +{heal} HP (зелий: {potions})");
+                Console.WriteLine($"ОТВАР! +{heal} HP (зелий: {potions})");
             }
             else
             {
-                Console.WriteLine("Нет зелий!");
+                Console.WriteLine("Нет БОБРИНОГО ОТВАРА!");
             }
         }
 
@@ -830,11 +830,11 @@ namespace NumericQuestUltimate
             else
             {
                 Console.WriteLine(de);
-                Console.WriteLine(" ПОРАЖЕНИЕ! Вы погибли в подземелье.");
+                Console.WriteLine(" ПЛОХ! Вы погибли в подземелье.");
                 Console.WriteLine("Попробуйте еще раз!");
             }
             ShowStats();
-            Console.WriteLine("\nНажмите любую клавишу для выхода.");
+            Console.WriteLine("\nНажмите любую клавишу для пшел вон.");
             Console.ReadKey();
         }
     }
