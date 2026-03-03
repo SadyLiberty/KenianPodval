@@ -825,7 +825,7 @@ namespace NumericQuestUltimate
             {
                 Console.WriteLine(de);
                 Console.WriteLine(" ПОБЕДА! Вы одолели босса!");
-                Console.WriteLine("Вы - настоящий герой подземелья!");
+                Console.WriteLine("Вы теперь можете жить в кенийском подвале почти безопасно !");
             }
             else
             {
