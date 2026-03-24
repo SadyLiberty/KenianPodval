@@ -8,25 +8,44 @@ namespace ConsoleApp1
         {
             Cat cat = new Cat();
 
-            Console.WriteLine("Добро пожаловать в игру с животными!");
+            Console.WriteLine("вапвапвапвап");
             Console.WriteLine();
 
             cat.Voice();
 
             Console.Write("Сколько лет кошке? ");
             int age = Convert.ToInt32(Console.ReadLine());
-
             cat.ShowAge(age);
-            cat.CountEat();
+
+            Console.Write("Покормить кошку? (да/нет): ");
+            string eat = Console.ReadLine();
+
+            if (eat.ToLower() == "да")
+            {
+                cat.Feed();
+            }
+            else
+            {
+                Console.WriteLine("Кошка жрать хочкт ");
+                cat.health--;
+            }
+
+            Console.Write("Дать кошке воду? (да/нет): ");
+            string drink = Console.ReadLine();
+
+            if (drink.ToLower() == "да")
+            {
+                Console.WriteLine("Кошка попила воды ");
+            }
+            else
+            {
+                Console.WriteLine("Кошка хочет пить ");
+                cat.health--;
+            }
+
             cat.CountHealth();
 
-            Console.WriteLine();
-
-            Dog dog = new Dog();
-            dog.Voice();
-
-            Parrot parrot = new Parrot();
-            parrot.Voice();
+            Console.WriteLine("Игра конец");
         }
     }
 
@@ -38,47 +57,25 @@ namespace ConsoleApp1
     class Cat : IAnimal
     {
         public int health = 9;
-        public int dryFood = 2;
-        public int wetFood = 3;
-        public int water = 1;
 
         public void Voice()
         {
-            Console.WriteLine("Кошка говорит: мур мур ");
+            Console.WriteLine("Кошка: Мяу  мур ");
         }
 
         public void ShowAge(int age)
         {
-            Console.WriteLine($"Кошке {age} лет");
+            Console.WriteLine($"Кошке {age} нига лет");
+        }
+
+        public void Feed()
+        {
+            Console.WriteLine("Кошка нига  покушала ");
         }
 
         public void CountHealth()
         {
-            Console.WriteLine($"Жизней кошки: {health} / еще 9");
-        }
-
-        public void CountEat()
-        {
-            Console.WriteLine($"Сухой корм: {dryFood}");
-            Console.WriteLine($"Влажный корм: {wetFood}");
-            Console.WriteLine($"Воды в день: {water} нигалитров");
-        }
-    }
-
-    class Dog : IAnimal
-    {
-        public void Voice()
-        {
-            Console.WriteLine("Собака говорит: ав ав ");
-        }
-    }
-
-    class Parrot : IAnimal
-    {
-        public void Voice()
-        {
-            Console.WriteLine("Попугай говорит: кар кар");
+            Console.WriteLine($"хп кошки: {health}/9");
         }
     }
 }
-
