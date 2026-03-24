@@ -36,14 +36,14 @@ class Cat : IAnimal
 
     public void CountHealth()
     {
-        Console.WriteLine($"Жизней кошки: {health} / 9");
+        Console.WriteLine($"Жизней кошки: {health} / 9 еще ");
     }
 
     public void CountEat()
     {
-        Console.WriteLine($"Норма по сухому корму: {dryFood}");
-        Console.WriteLine($"Норма по влажному корму: {wetFood}");
-        Console.WriteLine($"Воды в день: {water} л");
+        Console.WriteLine($"Нормас по сухому корму: {dryFood}");
+        Console.WriteLine($"нормас по влажному корму: {wetFood}");
+        Console.WriteLine($"нормас воды в день: {water} нигалитров");
     }
 }
 
@@ -51,7 +51,7 @@ class Dog : IAnimal
 {
     public void Voice()
     {
-        Console.WriteLine("Гав");
+        Console.WriteLine("ав ав ");
     }
 }
 
@@ -59,7 +59,7 @@ class Parrot : IAnimal
 {
     public void Voice()
     {
-        Console.WriteLine("Чик-чирик");
+        Console.WriteLine("Кар кар ");
     }
 }
 
