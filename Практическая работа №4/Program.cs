@@ -75,7 +75,7 @@ namespace ConsoleApp1
 
         public void CountHealth()
         {
-            Console.WriteLine($"хп кошки: {health}/9");
+            Console.WriteLine($"хп кошки: {health}-9");
         }
     }
 }
